@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    background: linear-gradient(135deg, var(--blue-1), var(--blue-2));
+}
+
+.pogoda{
+    font-family: 'Tilt Neon', cursive;
+}
+
+.wrapper{
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.active{
+    left: 0;
+}
+.burger-container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.burger{
+    margin-top: 30px;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 28px;
+    display: flex;
+}
+
+.burger span{
+    height: 4px;
+    width: 80%;
+    transform: scale(1);
+    background-color: white;
+}
+
+.burger::before, .burger::after{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: #FAF6F2;
+    transition: all 0.3s ease 0s;
+}
+
+.burger::before {top: 0}
+
+.burger::after {bottom: 0}
+
+.burger.active span{transform: scale(0);}
+
+.burger.active::before{
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after{
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
+#result{
+    margin-top: 50px;
+}
+#result .imgweather img{
+    width: 70%;
+}
+.imgweather{
+    display: flex;
+    justify-content: center;
+}
+.name-city{
+    font-size: 50px;
+}
+
+.man-min{
+    background-color: rgba(198, 194, 194, 0.297);
+    border-radius: 20px;
+    padding: 20px 37px;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    background-color: #4475ef;
+    padding: 2em 1.8em;
+    border: 2px solid var(--transp-white-2);
+    border-radius: 0.6em;
+    box-shadow: 0 1.8em 3.7em var(--shadow);
+    gap: 1.25em;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 0;
+}
+#navigator{
+    height: 30px;
+}
+.gradusy{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.gradusy p{
+    font-size: 70px;
+    width: 50%;
+}
+.gradusy h4{
+    font-size: 20px;
+    margin-bottom: 7px;
+    margin-right: 20px;
+}
+.active{
+    left: 0;
+}
+.search-container input, .search-container button{
+    outline: none;
+    font-size: 1.1em;
+    border: none;
+}
+.search-container input{
+    padding: 0.7em;
+    background-color: transparent;
+    border-bottom: 2px solid var(--transp-white-1);
+    color: var(--white);
+    font-weight: 300;
+}
+.search-container input::placeholder{
+    color: var(--off-white);
+}
+.search-container input:focus{
+    border-color: var(--white);
+}
+.search-container button{
+    color: var(--blue-2);
+    background-color: var(--white);
+    border-radius: 0.3em;
+}
+
+:root{
+    --white: #ffffff;
+    --off-white: #e5e5e5;
+    --transp-white-1: rgba(255, 255, 255, 0.25);
+    --transp-white-2: rgba(255, 255, 255, 0.1);
+    --blue-1:  #62b8f5;
+    --blue-2: #4475ef;;
+    --shadow: rgba(3, 46, 87, 0.2)
+}
+.maxmin{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+.man-min div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    height: 40px;
+}
+.man-min .title{
+    font-size: 20px;
+}
+.current{
+    text-align: center;
+    margin-top: 50px;
+}
+.hours{
+    display: flex;
+    overflow:  scroll;
+    padding: 20px;
+    margin-top: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(94 83 83 / 30%);
+    border-radius: 20px;
+}
+.hour{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+}
+#select{
+    border: none;
+    font-size: 35px;
+}
+.current .temp{
+    font-size: 70px;
+}
+#description{
+    font-size: 20px;
+}
+
+.prognoz{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 5px;
+}
+.now{
+    font-size: 33px;
+    width: 35%;
+}
+.imgweathercod{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prognoz img{
+    height: 70px;
+}
+
+.daily{
+    margin-right: auto;
+    margin-top: 40px;
+    backdrop-filter: blur(4px);
+    width: 90%;
+    margin-left: auto;
+    background-color: rgb(94 83 83 / 30%);
+    border-radius: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}

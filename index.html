@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Weather</title>
+</head>
+<span class="demo"></span>
+<body>
+    <div class="burger-container">
+        <div class="burger">
+            <span></span>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" placeholder="Bishkek" id="city" value="">
+                <button id="search-btn">Search</button>
+            </div>
+            <div id="result"></div>
+        </div>
+    </div>
+    <div class="pogoda">
+        <div class="current">
+            <H1>Bishkek</H1>
+            <h1 class="temp">26 °</h1>
+            <img id="descriptionIcon" src="" alt="">
+            <p id="description"></p>
+            <div class="maxmin">
+                <p id="maxTemp"></p>
+                <p id="minTemp"></p>
+            </div>
+        </div>
+        <div class="hours"></div>
+        <div class="daily">
+            <p id="MAXtemp"></p>
+            <p id="MINtemp"></p>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
